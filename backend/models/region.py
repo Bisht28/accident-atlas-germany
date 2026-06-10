@@ -28,6 +28,12 @@ class Region(Base):
         index=True
     )
 
+    source_code: Mapped[str | None] = mapped_column(
+        String(50),
+        nullable=True,
+        index=True
+    )
+
     region_name: Mapped[str] = mapped_column(
         String(255),
         index=True
